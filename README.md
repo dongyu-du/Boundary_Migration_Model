@@ -4,7 +4,7 @@ This repository contains data and code for the paper __[A boundary migration mod
 
 ## Citation
 
-If you use vLLM for your research, please cite our paper:
+If you use BMM for your research, please cite our paper:
 ```bibtex
 @article{RF1,
    author = {Du, Dongyu and Jin, Xin and Deng, Rujia and Kang, Jinshi and Cao, Hongkun and Fan, Yihui and Li, Zhiheng and Wang, Haoqian and Ji, Xiangyang and Song, Jingyan},
