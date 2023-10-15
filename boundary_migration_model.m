@@ -1,58 +1,56 @@
 % Reconstruction procedures for "A boundary migration model for imaging within volumetric scattering media"
 % by Dongyu Du, Xin Jin, and Rujia Deng et.al.
-%
-
-
+% Questions can be addressed to Dongyu Du(dudy19@mails.tsinghua.edu.cn)
 
 clear;
 clc;
 
-scene=1;
+scene=4;
     
     switch scene             
         case {1}
              dataname = '8cmFoam_LambertianT_7cmFoam.mat';  
              load(['./data/' dataname]);
              width = 0.11;
-             len=148;fir=14;sec=79;   gamma =2.6;
+             pad_length=148;rect1=14;rect2=79;   gamma =2.6;
         case {2}
              dataname = '7cmFoam_LambertianT_7cmFoam.mat';  
              load(['./data/' dataname]);
              width = 0.1;
-             len=126;fir=15;sec=67;   gamma =1.7;
+             pad_length=126;rect1=15;rect2=67;   gamma =1.7;
         case {3}
              dataname = '6cmFoam_LambertianT_7cmFoam.mat';  
              load(['./data/' dataname]);
              width = 0.1;
-             len=120;fir=18;sec=68;   gamma =1.7;
+             pad_length=120;rect1=18;rect2=68;   gamma =1.7;
         case {4}
              dataname = '5cmFoam_LambertianT_7cmFoam.mat';  
-             load(['./data/' dataname]);
-             width = 0.1;
-             len=147;fir=17;sec=79;   gamma =1.5;
+             load(['./data/' dataname]);raw_data = rect_data;
+             width = 0.05;
+             pad_length=119;rect1=18;rect2=64;   gamma =2.2;
         case {5}
              dataname = '4cmFoam_LambertianT_7cmFoam.mat';  
              load(['./data/' dataname]);
              width = 0.1;
-             len=112;fir=22;sec=65;   gamma =2.5;  
+             pad_length=112;rect1=22;rect2=65;   gamma =2.5;  
         case {6}
              dataname = '3cmFoam_LambertianT_7cmFoam.mat';  
              load(['./data/' dataname]);
              width = 0.1;
-             len=117;fir=16;sec=65;   gamma =1;              
+             pad_length=117;rect1=16;rect2=65;   gamma =1;              
         case {7}
              dataname = '2cmFoam_LambertianT_7cmFoam.mat';  
              load(['./data/' dataname]);
              width = 0.1;
-             len=65;fir=18;sec=42;   gamma =1.5;    
+             pad_length=65;rect1=18;rect2=42;   gamma =1.5;    
                                             
     end        
 
 
     % Data Rectification
     raw_data= permute(raw_data(end:-1:1,end:-1:1,:),[2,1,3]);           
-    rect_data = zeros(size(raw_data,1),size(raw_data,2),len);
-    rect_data(:,:,1:sec-fir+1)=raw_data(:,:,fir:sec);
+    rect_data = zeros(size(raw_data,1),size(raw_data,2),pad_length);
+    rect_data(:,:,1:rect2-rect1+1)=raw_data(:,:,rect1:rect2);
     rect_data = rect_data(:,:,:);   
     
 
