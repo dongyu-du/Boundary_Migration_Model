@@ -5,13 +5,13 @@ This repository contains data and code for the paper __[A boundary migration mod
 ## Data
 The provided data are all captured in the polyethylene foam scenario. The object is the Lambertian letter ‘T’ which is located at different depths from 2cm to 8cm inside the foam. As the description in the main text, the total thicknesses of the foam are 9cm to 15cm. 
 
-|<img src="fig/Foam_scenario.jpg" width="500" height="300" style="padding-right:20px;" />
+<img src="fig/Foam_scenario.jpg" width="800" height="300" style="padding-right:20px;" />
 
 ## Reconstructions
 
 The reconstructions of the proposed method are shown below (details are in the Supplementary Table 2). 
 
-|<img src="fig/results.png"  />
+<img src="fig/results.png"  />
 
 
 ## Run
