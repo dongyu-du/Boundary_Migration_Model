@@ -11,7 +11,7 @@ The provided data are all captured in the polyethylene foam scenario. The object
 
 The reconstructions of the proposed method are shown below (details are in the Supplementary Table 2). 
 
-|<img src="fig/results.png" width="500" height="300" style="padding-right:20px;" />
+|<img src="fig/results.png"  />
 
 
 ## Run
