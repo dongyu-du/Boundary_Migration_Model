@@ -25,7 +25,7 @@ scene=4;
              pad_length=120;rect1=18;rect2=68;   gamma =1.7;
         case {4}
              dataname = '5cmFoam_LambertianT_7cmFoam.mat';  
-             load(['./data/' dataname]);raw_data = rect_data;
+             load(['./data/' dataname]);
              width = 0.05;
              pad_length=119;rect1=18;rect2=64;   gamma =2.2;
         case {5}
