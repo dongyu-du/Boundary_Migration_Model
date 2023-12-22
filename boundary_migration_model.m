@@ -19,7 +19,7 @@
 clear;
 clc;
 
-scene=8;
+scene=4;
     
     switch scene             
         case {1}
