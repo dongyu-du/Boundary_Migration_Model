@@ -19,7 +19,7 @@
 clear;
 clc;
 
-scene=4;
+scene=8;
     
     switch scene             
         case {1}
@@ -57,6 +57,11 @@ scene=4;
              load(['./data/' dataname]);
              width = 0.1;
              pad_length=65;rect1=18;rect2=42;   gamma =1.5;    
+        case {8}
+             dataname = 'Fog_Bunny.mat';  
+             load(['./data/' dataname]);
+             width = 0.1;
+             pad_length=140;rect1=11;rect2=68;   gamma =1.7;  
                                             
     end        
 
